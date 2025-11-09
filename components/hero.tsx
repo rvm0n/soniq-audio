@@ -26,30 +26,16 @@ export function Hero() {
         />
       </div>
 
-      <Plus size={24} strokeWidth={1.5} className="absolute top-24 left-4 md:left-12 text-foreground/30 z-10" />
-      <Plus size={24} strokeWidth={1.5} className="absolute top-24 right-4 md:right-12 text-foreground/30 z-10" />
-      <Plus size={24} strokeWidth={1.5} className="absolute bottom-24 left-4 md:left-12 text-foreground/30 z-10" />
-      <Plus size={24} strokeWidth={1.5} className="absolute bottom-24 right-4 md:right-12 text-foreground/30 z-10" />
-
-      {/* Connecting lines from corners */}
-      <div className="absolute top-24 left-0 right-0 h-px bg-border/60" />
-      <div className="absolute bottom-24 left-0 right-0 h-px bg-border/60" />
-      <div className="absolute top-0 bottom-0 left-4 md:left-12 w-px bg-border/60" />
-      <div className="absolute top-0 bottom-0 right-4 md:right-12 w-px bg-border/60" />
-
-      {/* Dashed center line */}
-      <div className="absolute top-0 bottom-0 left-1/2 w-px border-l border-dashed border-border/50" />
-
-      {/* Corner border frames */}
-      <div className="absolute top-20 left-0 w-32 h-32 border-l border-t border-border/40" />
-      <div className="absolute top-20 right-0 w-32 h-32 border-r border-t border-border/40" />
-      <div className="absolute bottom-20 left-0 w-32 h-32 border-l border-b border-border/40" />
-      <div className="absolute bottom-20 right-0 w-32 h-32 border-r border-b border-border/40" />
+      {/* Corner plus icons - aligned to grid intersections (80px grid) */}
+      <Plus size={24} strokeWidth={1.5} className="absolute text-foreground/30 z-10" style={{ top: '160px', left: '80px', transform: 'translate(-50%, -50%)' }} />
+      <Plus size={24} strokeWidth={1.5} className="absolute text-foreground/30 z-10" style={{ top: '160px', right: '72px', transform: 'translate(50%, -50%)' }} />
+      <Plus size={24} strokeWidth={1.5} className="absolute text-foreground/30 z-10" style={{ bottom: '55px', left: '80px', transform: 'translate(-50%, 50%)' }} />
+      <Plus size={24} strokeWidth={1.5} className="absolute text-foreground/30 z-10" style={{ bottom: '55px', right: '72px', transform: 'translate(50%, 50%)' }} />
 
       <div className="container mx-auto px-4 lg:px-8">
         <div className="relative max-w-4xl mx-auto">
           <div className="flex justify-center mb-6">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border/50 bg-muted/30">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-border bg-muted/30">
               <div className="size-2 rounded-full bg-primary animate-pulse" />
               <span className="font-mono text-xs tracking-wider text-muted-foreground">OPEN SOURCE</span>
             </div>
@@ -57,7 +43,7 @@ export function Hero() {
 
           {/* Main heading */}
           <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-center mb-6 text-balance">
-            Crafting apps for{" "}
+            Building apps for{" "}
             <span className="relative inline-block">
               <span className="relative z-10 bg-gradient-to-br from-foreground via-primary to-foreground bg-clip-text text-transparent">
                 music producers
@@ -68,19 +54,19 @@ export function Hero() {
 
           {/* Description */}
           <p className="text-lg md:text-xl text-muted-foreground text-center mb-10 max-w-2xl mx-auto leading-relaxed">
-            Building powerful, open-source tools for the next generation of audio creators. Free forever.
+            Modern, open-source tools for music producers and audio creators.
           </p>
 
           {/* CTA buttons */}
           <div className="flex flex-wrap items-center justify-center gap-4">
-            <Link href="#projects">
-              <Button size="lg" className="group">
+            <Link href="#projects" className="cursor-pointer">
+              <Button size="lg" className="group bg-foreground text-background hover:bg-foreground/90 dark:bg-primary dark:text-primary-foreground dark:hover:bg-primary/90">
                 Explore Projects
                 <ArrowRight className="ml-2 size-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </Link>
-            <Link href="https://github.com/soniqaudio" target="_blank">
-              <Button size="lg" variant="outline">
+            <Link href="https://github.com/soniqaudio" target="_blank" className="cursor-pointer">
+              <Button size="lg" variant="outline" className="border-foreground/20 bg-background hover:bg-foreground hover:text-background dark:border-border dark:bg-input/30 dark:hover:bg-input/50 dark:hover:text-foreground">
                 View on GitHub
               </Button>
             </Link>

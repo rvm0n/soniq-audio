@@ -8,25 +8,47 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "SoniqAudio - Crafting apps for music producers",
+  title: "SoniqAudio - open source apps for music producers",
   description:
-    "Open source audio production tools built by creators, for creators. Professional-grade software free forever.",
-  generator: "v0.app",
-  icons: {
-    icon: [
+    "Open source audio production tools built by creators, for creators. Professional-grade software free forever. Building Tone, a web-based DAW for music producers.",
+  keywords: [
+    "audio production",
+    "music production",
+    "DAW",
+    "digital audio workstation",
+    "open source",
+    "web audio",
+    "music software",
+    "Tone DAW",
+    "browser DAW",
+    "music creation",
+  ],
+  authors: [{ name: "SoniqAudio" }],
+  creator: "SoniqAudio",
+  openGraph: {
+    title: "SoniqAudio - open source apps for music producers",
+    description:
+      "Open source audio production tools built by creators, for creators. Professional-grade software free forever.",
+    type: "website",
+    siteName: "SoniqAudio",
+    images: [
       {
-        url: "/icon-light-32x32.png",
-        media: "(prefers-color-scheme: light)",
-      },
-      {
-        url: "/icon-dark-32x32.png",
-        media: "(prefers-color-scheme: dark)",
-      },
-      {
-        url: "/icon.svg",
-        type: "image/svg+xml",
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "SoniqAudio - Open source apps for music producers",
       },
     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SoniqAudio - open source apps for music producers",
+    description:
+      "Open source audio production tools built by creators, for creators. Professional-grade software free forever.",
+    images: ["/og-image.jpg"],
+  },
+  icons: {
+    icon: "/soniqaudio-logo.jpg",
     apple: "/apple-icon.png",
   },
 }

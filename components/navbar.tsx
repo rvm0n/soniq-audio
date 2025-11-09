@@ -12,18 +12,22 @@ export function Navbar() {
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative size-8">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soniqaudio-logo-zTBOvXqqJmua478WPM0zq5pXqTGtA4.jpg"
+                src="/soniqaudio-logo-white.png"
                 alt="SoniqAudio"
                 width={32}
                 height={32}
-                className="object-contain"
+                className="object-contain block dark:hidden"
+              />
+              <Image
+                src="/soniqaudio-logo.jpg"
+                alt="SoniqAudio"
+                width={32}
+                height={32}
+                className="object-contain hidden dark:block"
               />
             </div>
-            <div className="relative">
-              <div className="absolute -inset-1 bg-primary/20 blur-sm rounded-sm opacity-0 group-hover:opacity-100 transition-opacity" />
-              <div className="relative font-mono font-bold text-xl tracking-wider">
-                SONIQ<span className="text-primary">AUDIO</span>
-              </div>
+            <div className="relative font-mono font-bold text-xl tracking-wider">
+              SONIQ<span className="text-primary">AUDIO</span>
             </div>
           </Link>
 
